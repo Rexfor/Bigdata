@@ -1,3 +1,16 @@
+- [Introduction](#Introduction)
+- [Theorical framework](#Theoretical-framework)
+- [SVM](#SVM)
+- [Decision tree](#Decision-tree)
+- [Logistic Regression](#Logistic-Regression)
+- [Multilayer Perceptron](#Multilayer-perceptron)
+- [Implementation](#Implementation)
+- [Result](#Results)
+- [Conclusion](#Conclusions)
+- [References](#References)
+- [Code](#CODE)
+- [Author](#Collaborator)
+
 # Introduction
 
 Machine learning algorithms (Machine learning) are very useful tools for solving problems
@@ -11,45 +24,45 @@ evaluating their precision in the model when evaluating the data of a dataset of
 marketing department of a Portuguese bank in which calls are made, the information of the
 dataset is as follows:
 
-1 - age (numeric)
-2 - job : type of job (categorical:
+- 1 - age (numeric)
+- 2 - job : type of job (categorical:
 'admin.','blue-collar','entrepreneur','housemaid','management','retired','self-employed','servic
 es','student','technician','unemployed','unknown')
-3 - marital : marital status (categorical: 'divorced','married','single','unknown'; note: 'divorced'
+- 3 - marital : marital status (categorical: 'divorced','married','single','unknown'; note: 'divorced'
 means divorced or widowed)
-4 - education (categorical:
+- 4 - education (categorical:
 'basic.4y','basic.6y','basic.9y','high.school','illiterate','professional.course','university.degree','
 unknown')
-5 - default: has credit in default? (categorical: 'no','yes','unknown')
-6 - housing: has housing loan? (categorical: 'no','yes','unknown')
-7 - loan: has personal loan? (categorical: 'no','yes','unknown')
+- 5 - default: has credit in default? (categorical: 'no','yes','unknown')
+- 6 - housing: has housing loan? (categorical: 'no','yes','unknown')
+- 7 - loan: has personal loan? (categorical: 'no','yes','unknown')
 related with the last contact of the current campaign:
-8 - contact: contact communication type (categorical: 'cellular','telephone')
-9 - month: last contact month of year (categorical: 'jan', 'feb', 'mar', ..., 'nov', 'dec')
-10 - day_of_week: last contact day of the week (categorical: 'mon','tue','wed','thu','fri')
-11 - duration: last contact duration, in seconds (numeric). Important note: this attribute highly
+- 8 - contact: contact communication type (categorical: 'cellular','telephone')
+- 9 - month: last contact month of year (categorical: 'jan', 'feb', 'mar', ..., 'nov', 'dec')
+- 10 - day_of_week: last contact day of the week (categorical: 'mon','tue','wed','thu','fri')
+- 11 - duration: last contact duration, in seconds (numeric). Important note: this attribute highly
 affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known
 before a call is performed. Also, after the end of the call y is obviously known. Thus, this
 input should only be included for benchmark purposes and should be discarded if the
 intention is to have a realistic predictive model.
 other attributes:
-12 - campaign: number of contacts performed during this campaign and for this client
+- 12 - campaign: number of contacts performed during this campaign and for this client
 (numeric, includes last contact)
-13 - pdays: number of days that passed by after the client was last contacted from a
+- 13 - pdays: number of days that passed by after the client was last contacted from a
 previous campaign (numeric; 999 means client was not previously contacted)
-14 - previous: number of contacts performed before this campaign and for this client
+- 14 - previous: number of contacts performed before this campaign and for this client
 (numeric)
-15 - poutcome: outcome of the previous marketing campaign (categorical:
+- 15 - poutcome: outcome of the previous marketing campaign (categorical:
 'failure','nonexistent','success')
 social and economic context attributes
-16 - emp.var.rate: employment variation rate - quarterly indicator (numeric)
-17 - cons.price.idx: consumer price index - monthly indicator (numeric)
-18 - cons.conf.idx: consumer confidence index - monthly indicator (numeric)
-19 - euribor3m: euribor 3 month rate - daily indicator (numeric)
-20 - nr.employed: number of employees - quarterly indicator (numeric)
+- 16 - emp.var.rate: employment variation rate - quarterly indicator (numeric)
+- 17 - cons.price.idx: consumer price index - monthly indicator (numeric)
+- 18 - cons.conf.idx: consumer confidence index - monthly indicator (numeric)
+- 19 - euribor3m: euribor 3 month rate - daily indicator (numeric)
+- 20 - nr.employed: number of employees - quarterly indicator (numeric)
 Con esto debemos obtener la predicción en cuanto a si el cliente estará suscrito a un
 depósito de término
-21 - y - has the client subscribed a term deposit? (binary: 'yes','no')
+- 21 - y - has the client subscribed a term deposit? (binary: 'yes','no')
 A brief explanation of what each algorithm does will be given throughout the document.
 
 # Theoretical framework
@@ -180,7 +193,7 @@ have, which must be known variables, these can be qualitative or qualitative val
 must act as dependent variables. An example of this could be classifying the sex of a black
 widow by her size.
 
-#####Imagen
+![logistica](https://user-images.githubusercontent.com/60914099/104149030-97f56980-5389-11eb-968a-856a02cdde07.PNG)
 
 The logistic regression is divided into 2 types:
 - Binary logistic regression.
@@ -337,6 +350,9 @@ forward.
   varies with time but the one that had a point above it was the decision tree but with this we
   must also check the execution time with which we will have a better idea of which s the best
   algorithm.
+  
+  ![Accuracy](https://user-images.githubusercontent.com/60914099/104149085-cbd08f00-5389-11eb-96ee-9c62e6107c50.PNG)
+  
   The following table shows the execution times of each algorithm with a maximum iteration
   rate of 10, according to the data in the table at a glance we can infer that the decision tree
   algorithm takes the longest time in an iteration. It takes 15 seconds but if we review the table
@@ -345,18 +361,20 @@ forward.
   logistic regression algorithm which takes 10.9 seconds. , we can make a rank of these 4
   being as follows.
 
-  **1.Logistic regression:** 10.9 seconds.
-  **2.SVM:** 10.9 seconds.
-  **3.Decision tree:** 12.7 seconds.
-  **4.Multilayer perceptron:** 13 seconds.
+  - **1.Logistic regression:** 10.9 seconds.
+  - **2.SVM:** 10.9 seconds.
+  - **3.Decision tree:** 12.7 seconds.
+  - **4.Multilayer perceptron:** 13 seconds.
+
+![time](https://user-images.githubusercontent.com/60914099/104149098-dc810500-5389-11eb-9cb9-896817f81f98.PNG)
 
   According to the previous data tables, they all have a similar performance but according to
   the execution time and its level of precision, they would be as follows,
 
-  **1.Logistic regression.**
-  **2.SVM.**
-  **3.Decision tree**
-  **4.Multilayer perceptron.**
+  - **1.Logistic regression.**
+  - **2.SVM.**
+  - **3.Decision tree**
+  - **4.Multilayer perceptron.**
 
   The first place is the logistic regression algorithm that has a shorter execution time and its
   level of precision is one of the highest and in these times of speed, time is everything.
@@ -635,3 +653,5 @@ val time3 = System.nanoTime
 val duration = (System.nanoTime - time3) / 1e9d
 println("Tiempo de ejecución: " + duration)
 ```
+### Collaborator
+* **Rexfor** - [Github] (https://github.com/Rexfor)
