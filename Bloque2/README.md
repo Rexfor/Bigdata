@@ -1,8 +1,14 @@
+<<<<<<< Updated upstream
 Introduction
+=======
+#Introduction
+
+>>>>>>> Stashed changes
 Machine learning or machine learning in Spanish is a branch of data science / artificial intelligence that is used to generate systems that learn by themselves, that is, they are programmed to learn automatically, this is done by identifying patterns in millions of data that can process, with this it is expected that the created system can predict future behaviors in millions of data, at present machine learning has been in trend together with big data in large companies since they can provide tools that are very useful to these companies, although we could say that machine learning is something very old because since the 50s people have looked for a way to generate intelligent systems that could perform tasks autonomously, for example in 1952 where a system was generated that I could play Chinese checkers and I was getting better game after game, but it wasn't until the 1980s that e systems were generated with rules to discard data from a data group, these being well received by corporations being a milestone in 1981 Gerald Dejong introduces the concept of “Explanation Based Learning”, where the system analyzes training data and generates rules that allow you to discard unnecessary data; for a time machine learning was stagnant until in 2006 a great interest in it was generated, given that the computing power in the hardware was increasing and with the great abundance of data that there was machine learning would bring again to the game, with the great advances in the power of computers, machine learning was gaining a lot of ground in the industries, having giants that use it to analyze large amounts of data such as Google that bought a deep learning startup or its own development with GoogleBrain to autonomously analyze YouTube videos and detect those that contain cats.
 In this way we can know that machine learning is essential for our daily lives, since with this we can have recommender systems like those of Netflix that, based on our preferences, can recommend movies or series that may interest us, according to this, in machine learning there are classifier and regression algorithms; This document will seek to delve into the different algorithms in the world of machine learning, mainly the classification and regression algorithms together with their scala code using the spark framework, but before we begin, we must know what we mean by each algorithm type.
 The classification algorithms try to identify and classify objects on a set of predefined classes, for example, classify if a news is sports, entertainment, politics, etc. If only 2 possible classes are allowed, then it is called binary classification; but if more than 2 classes are allowed, we are talking about multiclass classification, this type of algorithms is in the supervised learning category since they learn based on the relationships that associate the input values ​​with the information output values ​​according to the type of data output you can have the category to which the algorithm belongs, it can be classification or regression where we would find out if it is regression because the output value would be continuous data, thus being a line with the prediction.
 
+<<<<<<< Updated upstream
 Classification algorithms
 The classification algorithms is a concept that is often used in the world of machine learning, which, as we will see, is used to predict a category in which an object can be classified based on the input data, for example we can use this type algorithms to predict if an email is "spam" or is a "real", in this type of algorithms there are two main classifications. we have the:
 
@@ -13,6 +19,19 @@ In this case, the multinomial type is one that has input data but has a large nu
 Animals.
 People.
 Plants.
+=======
+#Classification algorithms
+
+The classification algorithms is a concept that is often used in the world of machine learning, which, as we will see, is used to predict a category in which an object can be classified based on the input data, for example we can use this type algorithms to predict if an email is "spam" or is a "real", in this type of algorithms there are two main classifications. we have the:
+
+##Binary classification.
+  -In this case we can use the example given above, with the mail that must be categorized as "spam" or "true" mail, since we only have 2 final data taking as 0 or 1 any of the two states in which the mail, if an email enters and must be classified in any of these 2 classes, if it is "spam" it would be "0" and if it is "true" it would be "1" taking into account the characteristics of the new mail that arrives.
+###Multinomial Classification.
+  -In this case, the multinomial type is one that has input data but has a large number of output values, an example is the classification of a set of images, taking into account that we are asked to classify an image in categories such as:
+-Animals.
+-People.
+-Plants.
+>>>>>>> Stashed changes
 
 If it only had two classes, it would be a binary classification.
 Next, some algorithms and their explanation in code using scala will be explained in a detailed way with the help of the spark framework and with the help of the MLlib library which is used in scala to handle Machine Learning in a simple way, which gives us many tool for the use of machine learning, with a few simple lines of code we can observe in more detail the operation of some algorithms of the classification type.
@@ -28,7 +47,11 @@ Next, some algorithms and their explanation in code using scala will be explaine
 
 
 
+<<<<<<< Updated upstream
   - Logistic regression
+=======
+##Logistic regression
+>>>>>>> Stashed changes
 Logistic regression is a statistical tool developed in the 60's, it is a simple but very useful algorithm and it can be adapted for a multiclass classification, the basis of regression systems is to predict qualitative characteristics of an object based on The data that we could have, which must be known variables, these can be qualitative or qualitative values that must act as dependent variables. An example of this could be classifying the sex of a black widow by her size.
 
 Imagen1.-Regresión logística
@@ -44,7 +67,11 @@ Through logistic regression, the aim is to obtain the probability that an event 
 
 
 
+<<<<<<< Updated upstream
    - Binomial logistic regression
+=======
+##Binomial logistic regression
+>>>>>>> Stashed changes
 
 The binary logistic regression algorithm is a subcategory of the logistic regression algorithms, it refers to binary because it is one in which you can only have two final values, 0 or 1, false or true, its use can be given when we are interested in knowing the influence of a set of variables to predict an output variable, its use is very useful for when we want to know a third variable.
 
