@@ -1,21 +1,23 @@
-#Introduction
+## Introduction
 Machine learning or machine learning in Spanish is a branch of data science / artificial intelligence that is used to generate systems that learn by themselves, that is, they are programmed to learn automatically, this is done by identifying patterns in millions of data that can process, with this it is expected that the created system can predict future behaviors in millions of data, at present machine learning has been in trend together with big data in large companies since they can provide tools that are very useful to these companies, although we could say that machine learning is something very old because since the 50s people have looked for a way to generate intelligent systems that could perform tasks autonomously, for example in 1952 where a system was generated that I could play Chinese checkers and I was getting better game after game, but it wasn't until the 1980s that e systems were generated with rules to discard data from a data group, these being well received by corporations being a milestone in 1981 Gerald Dejong introduces the concept of “Explanation Based Learning”, where the system analyzes training data and generates rules that allow you to discard unnecessary data; for a time machine learning was stagnant until in 2006 a great interest in it was generated, given that the computing power in the hardware was increasing and with the great abundance of data that there was machine learning would bring again to the game, with the great advances in the power of computers, machine learning was gaining a lot of ground in the industries, having giants that use it to analyze large amounts of data such as Google that bought a deep learning startup or its own development with GoogleBrain to autonomously analyze YouTube videos and detect those that contain cats.
 In this way we can know that machine learning is essential for our daily lives, since with this we can have recommender systems like those of Netflix that, based on our preferences, can recommend movies or series that may interest us, according to this, in machine learning there are classifier and regression algorithms; This document will seek to delve into the different algorithms in the world of machine learning, mainly the classification and regression algorithms together with their scala code using the spark framework, but before we begin, we must know what we mean by each algorithm type.
 The classification algorithms try to identify and classify objects on a set of predefined classes, for example, classify if a news is sports, entertainment, politics, etc. If only 2 possible classes are allowed, then it is called binary classification; but if more than 2 classes are allowed, we are talking about multiclass classification, this type of algorithms is in the supervised learning category since they learn based on the relationships that associate the input values ​​with the information output values ​​according to the type of data output you can have the category to which the algorithm belongs, it can be classification or regression where we would find out if it is regression because the output value would be continuous data, thus being a line with the prediction.
 
-#Classification algorithms
+##Classification algorithms
 
 The classification algorithms is a concept that is often used in the world of machine learning, which, as we will see, is used to predict a category in which an object can be classified based on the input data, for example we can use this type algorithms to predict if an email is "spam" or is a "real", in this type of algorithms there are two main classifications. we have the:
 
 ##Binary classification.
   -In this case we can use the example given above, with the mail that must be categorized as "spam" or "true" mail, since we only have 2 final data taking as 0 or 1 any of the two states in which the mail, if an email enters and must be classified in any of these 2 classes, if it is "spam" it would be "0" and if it is "true" it would be "1" taking into account the characteristics of the new mail that arrives.
-###Multinomial Classification.
-  -In this case, the multinomial type is one that has input data but has a large number of output values, an example is the classification of a set of images, taking into account that we are asked to classify an image in categories such as:
--Animals.
--People.
--Plants.
 
-If it only had two classes, it would be a binary classification.
+##Multinomial Classification.
+  -In this case, the multinomial type is one that has input data but has a large number of output values, an example is the classification of a set of images, taking into account that we are asked to classify an image in categories such as:
+    -Animals.
+    -People.
+    -Plants.
+
+    -If it only had two classes, it would be a binary classification.
+
 Next, some algorithms and their explanation in code using scala will be explained in a detailed way with the help of the spark framework and with the help of the MLlib library which is used in scala to handle Machine Learning in a simple way, which gives us many tool for the use of machine learning, with a few simple lines of code we can observe in more detail the operation of some algorithms of the classification type.
 
 
@@ -32,12 +34,10 @@ Next, some algorithms and their explanation in code using scala will be explaine
 ##Logistic regression
 Logistic regression is a statistical tool developed in the 60's, it is a simple but very useful algorithm and it can be adapted for a multiclass classification, the basis of regression systems is to predict qualitative characteristics of an object based on The data that we could have, which must be known variables, these can be qualitative or qualitative values that must act as dependent variables. An example of this could be classifying the sex of a black widow by her size.
 
-Imagen1.-Regresión logística
-
 The logistic regression is divided into 2 types:
-Binary logistic regression.
+-Binary logistic regression.
 This makes use of known variables, whether qualitative or quantitative, to act as the variables that will be used to determine the characteristics that we need to predict a third variable that can only have an answer within parameters 0 or 1.
-Multinomial logistic regression.
+-Multinomial logistic regression.
 Multinomial regression also makes use of qualitative or quantitative variables to predict data, but in this case we not only have 2 classes 0 or 1, in this case we can have more of these classes.
 
 Through logistic regression, the aim is to obtain the probability that an event occurs based on variables that we determine are important to predict the new one, these must be relevant to be able, for example, if we have a human being and we want to classify it in a biological gender, We can do it if we have information about the reproductive system, its complexion, etc; with these data we could predict their sex.
@@ -51,30 +51,30 @@ The binary logistic regression algorithm is a subcategory of the logistic regres
 
 If we have a variable in which we only have two possible events in which a person lives or dies, these will be our dependent variables and we want to know the effect of other independent variables such as age or smoking, the logistic regression model will help us to calculate the next:
 
-Given the values of the independent variables, estimate the probability that the event of interest occurs (for example, becoming ill).
-We can evaluate the influence that each independent variable has on the response, in the form of OR.
-An OR greater than one indicates an increase in the probability of the event and an OR less than one indicates a decrease.
+-Given the values of the independent variables, estimate the probability that the event of interest occurs (for example, becoming ill).
+-We can evaluate the influence that each independent variable has on the response, in the form of OR.
+-An OR greater than one indicates an increase in the probability of the event and an OR less than one indicates a decrease.
 
 But to build a binary logistic regression model we need:
-A set of independent variables.
-A response variable that only has two values 0 or 1. Here it differs from the multiple regression model, where the response variable is numeric.
+-A set of independent variables.
+-A response variable that only has two values 0 or 1. Here it differs from the multiple regression model, where the response variable is numeric.
 
 Steps to follow to encode the variables:
 
-The dependent variable must be coded as 1, which will indicate that the event can happen and its absence as 0.
-The independent variables can be several, the following being the most used:
-Dichotomic:
-The case that is believed favors the occurrence of the event is coded as 1. The opposite case is encoded as 0.
-Categorical:
-When the independent variable can take more than two possible values, unlike the dichotomous variable, we can code them using indicator variables.
-Numerical
-It is to make use of cutoff values that suit us to be able to create categories according to the chosen percentiles.
+-The dependent variable must be coded as 1, which will indicate that the event can happen and its absence as 0.
+-The independent variables can be several, the following being the most used:
+    -Dichotomic:
+      -The case that is believed favors the occurrence of the event is coded as 1. The opposite case is encoded as 0.
+    -Categorical:
+      -When the independent variable can take more than two possible values, unlike the dichotomous variable, we can code them using indicator variables.
+    -Numerical
+      -It is to make use of cutoff values that suit us to be able to create categories according to the chosen percentiles.
 
 In order to obtain a correct binary logistic regression model, we must take into account that the parameters must be congruent with each other, therefore we must have a sufficient amount of observation data for each variable independently, likewise, unnecessary data must not be had in the observations we must correctly identify all the relevant variables for the model.
 
 This section will explain how the code of the binomial logistic implementation works in scala, using spark, in the following code the steps are performed to perform this regression.
 
-
+//```
 // We must load the class to use the function
 import org.apache.spark.ml.classification.LogisticRegression
 
@@ -111,6 +111,8 @@ val bestThreshold = fMeasure.where($"F-Measure" === maxFMeasure)
   .select("threshold").head().getDouble(0)
 lrModel.setThreshold(bestThreshold)
 
+```
+
 /*
 Output:
 +---+--------------------+
@@ -139,10 +141,10 @@ Output:
 +---+--------------------+
 only showing top 20 rows
 areaUnderROC: 1.0
-*/
 
 
-- Multinomial logistic regression
+
+##Multinomial logistic regression
 The multinomial logistic regression algorithm is used in models with dependent variables of the numerical type that can be divided into more than two categories, while the binary can only be done in 2 categories, being polyatomic, it is an extension of the binary version of logistic regression , the variables can be predictive with which we will help us to predict the result.
 Throughout the years, polycotomic variables have been modeled by discriminant analysis to determine if a variable using labels belongs to a category.
 It is based on the same principles as simple logistic regression but expanding the number of predictors. Predictors can be both continuous and categorical.
@@ -150,13 +152,14 @@ When evaluating the validity and quality of a multiple logistic regression model
 This is useful for situations in which you want to be able to classify subjects based on the values ​​of a set of predictor variables.
 Some considerations to take into account when performing this type of regression are:
 
-Data.
-The dependent variable must be categorical. The independent variables can be factors or covariates. In general, the factors must be categorical variables and the covariates must be continuous variables.
-Assumptions.
-The likelihood ratio of any pair of categories is assumed to be independent of the other response categories. Under this assumption, for example, if a new product is introduced into a market, the market shares of all other products will be affected equally proportionally. Similarly, given a pattern in the covariates, the responses are assumed to be independent multinomial variables.
+-Data.
+  -The dependent variable must be categorical. The independent variables can be factors or covariates. In general, the factors must be categorical variables and the covariates must be continuous variables.
+-Assumptions.
+  -The likelihood ratio of any pair of categories is assumed to be independent of the other response categories. Under this assumption, for example, if a new product is introduced into a market, the market shares of all other products will be affected equally proportionally. Similarly, given a pattern in the covariates, the responses are assumed to be independent multinomial variables.
 
 This section will explain how the multinomial logistics implementation code works in scala, using spark. The following code performs the steps to perform this regression.
 
+```
 // We must load the library that will help us with this classification algorithm
 import org.apache.spark.ml.classification.LogisticRegression
 
@@ -222,6 +225,8 @@ val precision = trainingSummary.weightedPrecision
 val recall = trainingSummary.weightedRecall
 println(s"Accuracy: $accuracy\nFPR: $falsePositiveRate\nTPR: $truePositiveRate\n" +
   s"F-measure: $fMeasure\nPrecision: $precision\nRecall: $recall")
+```
+
 /*
 Output:
 Coefficients:
@@ -269,9 +274,9 @@ TPR: 0.82
 F-measure: 0.8007300232766211
 Precision: 0.8678451178451179
 Recall: 0.82
-*/
 
-  - Decision tree classifier
+
+##Decision tree classifier
 Tree-based learning algorithms are considered one of the best and most widely used supervised learning methods. Tree-based methods empower predictive models with high precision, stability, and ease of interpretation.
 Unlike linear models, they map nonlinear relationships quite well. They are adaptable to solve any type of problem (classification or regression).
 
@@ -279,27 +284,28 @@ Methods like decision trees, random forest, gradient augmentation are popularly 
 Decision or classification trees are algorithms for classifying using successive partitions. They are appropriate when there is a large number of data, one of their advantages being their descriptive nature that allows to easily understand and interpret the decisions made by the model, revealing complex forms in the data structure that cannot be detected with conventional regression methods.
 
 The decision trees contain the following components:
-Nodes.
-The nodes are the input variables
-Branches
-The branches represent the possible values ​​of the input variables
-Leaves.
-The leaves are the possible values ​​of the output variable.
+-Nodes.
+  -The nodes are the input variables
+-Branches
+  -The branches represent the possible values ​​of the input variables
+-Leaves.
+  -The leaves are the possible values ​​of the output variable.
 
 As the first element of a decision tree, we have the root node that is going to represent the most relevant variable in the classification process. All decision tree learning algorithms obtain models that are more or less complex and consistent with respect to the evidence, but if the data contains inconsistencies, the model will adjust to these inconsistencies and harm its overall behavior in prediction. known as overfitting. To solve this problem, it is necessary to limit the growth of the tree by modifying the learning algorithms to achieve more general models. This is what is known as decision tree pruning.
 Taking into account the above we can see the following disadvantages:
 
-The overfitting.
-Loss of information when categorizing continuous variables.
-Its level of precision compared to other methods such as SVM tends to have an error rate of less than 30% approximately.
-Its instability to small changes in the data can modify the entire structure of the tree.
+-The overfitting.
+-Loss of information when categorizing continuous variables.
+-Its level of precision compared to other methods such as SVM tends to have an error rate of less than 30% approximately.
+-Its instability to small changes in the data can modify the entire structure of the tree.
 But just as it has disadvantages, it also has many advantages that help us with our problems.
-It's easy to understand.
-It is useful in exploring data.
-The data type does not represent a constraint.
+-It's easy to understand.
+-It is useful in exploring data.
+-The data type does not represent a constraint.
 
 This section will explain how the decision tree implementation code works in scala, using spark. The following code performs the steps to perform this regression.
 
+```
 // We must load the following libraries that will help us with this algorithm of // classification
 // The pipeline library helps us with the estimation of the data, while the decision
 // libraries help us with the model and its evaluation, while the feature library helps us
@@ -363,6 +369,8 @@ println(s"Test Error = ${(1.0 - accuracy)}")
 
 val treeModel = model.stages(2).asInstanceOf[DecisionTreeClassificationModel]
 println(s"Learned classification tree model:\n ${treeModel.toDebugString}")
+```
+
 /*
 Output:
 +--------------+-----+--------------------+
@@ -385,9 +393,9 @@ Else (feature 99 not in {2.0})
 Predict: 1.0
 Else (feature 406 > 22.0)
 Predict: 0.0
-*/
 
-  - Random forest classifier
+
+##Random forest classifier
 The Random Forest is a supervised learning algorithm. The "forest" that is built is a set of decision trees, generally trained with the packaging method. The general idea of ​​the bagging method is that a combination of learning models increases the overall result.
 Bottom line: Random Forest creates multiple decision trees and merges them together to get a more accurate and stable prediction.
 A great advantage of the random forest is that it can be used for both
@@ -403,14 +411,14 @@ And of course, the random forest is a predictive modeling tool and not a
 descriptive tool, which means if you are looking for a description of the relationships in your data, other approaches would be better.
 
 The way the random forest works is as follows:
-We select k features (columns) from the total m (where k is less than m) and we create a decision tree with those k features.
-We create n trees always varying the amount of k features and we could also vary the number of samples that we pass to those trees (this is known as a “bootstrap sample”)
-We take each of the n trees and ask them to make the same classification. We save the result of each tree obtaining n outputs.
-We calculate the votes obtained for each selected “class” and we will consider the one with the most votes as the final classification of our “forest”.
+-We select k features (columns) from the total m (where k is less than m) and we create a decision tree with those k features.
+-We create n trees always varying the amount of k features and we could also vary the number of samples that we pass to those trees (this is known as a “bootstrap sample”)
+-We take each of the n trees and ask them to make the same classification. We save the result of each tree obtaining n outputs.
+-We calculate the votes obtained for each selected “class” and we will consider the one with the most votes as the final classification of our “forest”.
 
 This section will explain how the decision tree implementation code works in scala, using spark. The following code performs the steps to perform this regression.
 
-
+```
 // We must load the following libraries that will help us with this random forest algorithm. In this case, as the algorithm is a more complex variant of the decision tree algorithm, the same libraries will be used as with the tree, but adding the decision tree model library.
 import org.apache.spark.ml.Pipeline
 import org.apache.spark.ml.classification.{RandomForestClassificationModel, RandomForestClassifier}
@@ -472,6 +480,8 @@ println("Test Error = " + (1.0 - accuracy))
 
 val rfModel = model.stages(2).asInstanceOf[RandomForestClassificationModel]
 println("Learned classification forest model:\n" + rfModel.toDebugString)
+```
+
 /*
 Output:
 +--------------+-----+--------------------+
@@ -591,8 +601,8 @@ Else (feature 517 > 20.5)
 Predict: 0.0
 Else (feature 301 > 30.0)
 Predict: 1.0
-*/
-  - Gradient-boosted tree classifier
+
+##Gradient-boosted tree classifier
 
 Gradient Boosting models are made up of a set of individual decision trees, trained sequentially, so that each new tree tries to improve on the errors of the previous trees. The prediction of a new observation is obtained by adding the predictions of all the individual trees that make up the model.
 Tree-based methods have become one of the benchmarks in the predictive field due to the good results they generate in very diverse problems.
@@ -603,6 +613,7 @@ In addition to the size of the trees that constitute a Boosting procedure, anoth
 
 This section will explain how the code for the implementation of the boosted gradient in scala works, using spark, the following code performs the steps to perform this regression.
 
+```
 // We must load the following libraries that will help us with this algorithm, since the booste gradient is a variant of the decision trees, the same libraries are used for the evaluation and indexing metadata.
 import org.apache.spark.ml.Pipeline
 import org.apache.spark.ml.classification.{GBTClassificationModel, GBTClassifier}
@@ -663,6 +674,8 @@ println("Test Error = " + (1.0 - accuracy))
 
 val gbtModel = model.stages(2).asInstanceOf[GBTClassificationModel]
 println("Learned classification GBT model:\n" + gbtModel.toDebugString)
+```
+
 /*
 Output:
 +--------------+-----+--------------------+
@@ -830,8 +843,8 @@ Else (feature 263 > 237.5)
 Predict: 0.27750666438358257
 Else (feature 434 > 88.5)
 Predict: -0.2775066643835825
-*/
-  - Multilayer perceptron classifier
+
+## Multilayer perceptron classifier
 Later work with multilayer perceptrons has shown that they are able to approximate an XOR operator, as well as many other non-linear functions.
 Just as Rosenblatt based the perceptron on a McCulloch-Pitts neuron, conceived in 1943, perceptrons themselves are building blocks that only prove useful in functions as large as multilayer perceptrons; The multilayer perceptron is the hello world of deep learning - a good place to start when you're learning about deep learning.
 A multilayer perceptron (MLP) is a deep artificial neural network. It is made up of more than one perceptron. They are composed of an input layer to receive the signal, an output layer that makes a decision or prediction about the input, and between those two, an arbitrary number of hidden layers that are the true computational engine of the MLP. MLPs with a hidden layer are able to approximate any continuous function.
@@ -842,13 +855,13 @@ The multilayer perceptron evolves the simple perceptron and for this it incorpor
 The multilayer perceptron is made up of an input layer, an output layer, and n hidden layers in between; It is characterized by having disjoint but related outputs, in such a way that the output of one neuron is the input of the next.
 In the multilayer perceptron, about 2 phases can be differentiated:
 
-Spread.
+- Spread.
 In which the output result of the network is calculated from the input values forward.
-Learning.
+- Learning.
 In which the errors obtained at the output of the perceptron are propagated backwards (backpropagation) in order to modify the weights of the connections so that the estimated value of the network increasingly resembles the real one, this approximation is carried out by the gradient function of the error.
 
 This section will explain how the code of the multilayer perceptron implementation in scala works, using spark, in the following code the steps are performed to be able to perform this regression.
-
+```
 // We must load the following libraries that will help us with this algorithm, for the classification of the perceptron type and its evaluation.
 import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
@@ -882,11 +895,13 @@ val evaluator = new MulticlassClassificationEvaluator()
   .setMetricName("accuracy")
 
 println("Test set accuracy = " + evaluator.evaluate(predictionAndLabels))
+```
+
 /*
 Output:
 Test set accuracy = 0.9019607843137255
-*/
-  - Linea der Support Vector Machine
+
+## Linea der Support Vector Machine
 Support vector machines were widely used before the deep learning era. For many applications the use of SVM was preferred over neural networks. The reason was that the math of SVMs was very well understood and the property of obtaining the maximum separation margin was very attractive. Neural networks could perform the classification in the wrong way as we have seen in the previous examples. Some success stories of support vector machines are:
 optical character recognition face detection for digital cameras to target correctly spam filters for email image recognition on board satellites (knowing which parts of an image have
 clouds, land, water, ice, etc.)
@@ -897,10 +912,11 @@ They are particularly one of those that first need to train with situations in w
 Those who invented the SVs were Vladimir Vapnik (a statistically oriented person) and his colleagues at AT&T. The method is based on the use of mathematical programming, formulated in such a way that the statistical interpretation of the model is particularly appropriate. The model is rigorously supported by the statistical learning theories proposed by Vapnik.
 SVM models will help us to predict data, as long as we have trained the machine. This prediction can be of several types:
 
-Binary classification prediction
-Multi-category ranking prediction
-General regression prediction.
+- Binary classification prediction
+- Multi-category ranking prediction
+- General regression prediction.
 
+```
 // We must load the following library that will help us with this SVC algorithm and its operation.
 import org.apache.spark.ml.classification.LinearSVC
 
@@ -917,35 +933,38 @@ val lsvcModel = lsvc.fit(training)
 
 // We print the coefficients of the SVC model
 println(s"Coefficients: ${lsvcModel.coefficients} Intercept: ${lsvcModel.intercept}")
+```
+
 /*
 Output:
 Coefficients: [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-5.170630317473439E-4,-1.172288654973735E-4,-8.882754836918948E-5,8.522360710187464E-5,0.0,0.0,-1.3436361263314267E-5,3.729569801338091E-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.888949552633658E-4,2.9864059761812683E-4,3.793378816193159E-4,-1.762328898254081E-4,0.0,1.5028489269747836E-6,1.8056041144946687E-6,1.8028763260398597E-6,-3.3843713506473646E-6,-4.041580184807502E-6,2.0965017727015125E-6,8.536111642989494E-5,2.2064177429604464E-4,2.1677599940575452E-4,-5.472401396558763E-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.21415502407147E-4,3.1351066886882195E-4,2.481984318412822E-4,0.0,-4.147738197636148E-5,-3.6832150384497175E-5,0.0,-3.9652366184583814E-6,-5.1569169804965594E-5,-6.624697287084958E-5,-2.182148650424713E-5,1.163442969067449E-5,-1.1535211416971104E-6,3.8138960488857075E-5,1.5823711634321492E-6,-4.784013432336632E-5,-9.386493224111833E-5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.3174897827077767E-4,1.7055492867397665E-4,0.0,-2.7978204136148868E-5,-5.88745220385208E-5,-4.1858794529775E-5,-3.740692964881002E-5,-3.9787939304887E-5,-5.545881895011037E-5,-4.505015598421474E-5,-3.214002494749943E-6,-1.6561868808274739E-6,-4.416063987619447E-6,-7.9986183315327E-6,-4.729962112535003E-5,-2.516595625914463E-5,-3.6407809279248066E-5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-2.4719098130614967E-4,0.0,-3.270637431382939E-5,-5.5703407875748054E-5,-5.2336892125702286E-5,-7.829604482365818E-5,-7.60385448387619E-5,-8.371051301348216E-5,-1.8669558753795108E-5,0.0,1.2045309486213725E-5,-2.3374084977016397E-5,-1.0788641688879534E-5,-5.5731194431606874E-5,-7.952979033591137E-5,-1.4529196775456057E-5,8.737948348132623E-6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-0.0012589360772978808,-1.816228630214369E-4,-1.0650711664557365E-4,-6.040355527710781E-5,-4.856392973921569E-5,-8.973895954652451E-5,-8.78131677062384E-5,-5.68487774673792E-5,-3.780926734276347E-5,1.3834897036553787E-5,7.585485129441565E-5,5.5017411816753975E-5,-1.5430755398169695E-5,-1.834928703625931E-5,-1.0354008265646844E-4,-1.3527847721351194E-4,-1.1245007647684532E-4,-2.9373916056750564E-5,-7.311217847336934E-5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-2.858228613863785E-4,-1.2998173971449976E-4,-1.478408021316135E-4,-8.203374605865772E-5,-6.556685320008032E-5,-5.6392660386580244E-5,-6.995571627330911E-5,-4.664348159856693E-5,-2.3026593698824318E-5,7.398833979172035E-5,1.4817176130099997E-4,1.0938317435545486E-4,7.940425167011364E-5,-6.743294804348106E-7,-1.2623302721464762E-4,-1.9110387355357616E-4,-1.8611622108961136E-4,-1.2776766254736952E-4,-8.935302806524433E-5,-1.239417230441996E-5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-2.829530831354112E-4,-1.3912189600461263E-4,-1.2593136464577562E-4,-5.964745187930992E-5,-5.360328152341982E-5,-1.0517880662090183E-4,-1.3856124131005022E-4,-7.181032974125911E-5,2.3249038865093483E-6,1.566964269571967E-4,2.3261206954040812E-4,1.7261638232256968E-4,1.3857530960270466E-4,-1.396299028868332E-5,-1.5765773982418597E-4,-2.0728798812007546E-4,-1.9106441272002828E-4,-1.2744834161431415E-4,-1.2755611630280015E-4,-5.1885591560478935E-5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.59081567023441E-4,-1.216531230287931E-4,-5.623851079809818E-5,-3.877987126382982E-5,-7.550900509956966E-5,-1.0703140005463545E-4,-1.4720428138106226E-4,-8.781423374509368E-5,7.941655609421792E-5,2.3206354986219992E-4,2.7506982343672394E-4,2.546722233188043E-4,1.810821666388498E-4,-1.3069916689929984E-5,-1.842374220886751E-4,-1.977540482445517E-4,-1.7722074063670741E-4,-1.487987014723575E-4,-1.1879021431288621E-4,-9.755283887790393E-5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.302740311359312E-4,-5.3683030235535024E-5,-1.7631200013656873E-5,-7.846611034608254E-5,-1.22100767283256E-4,-1.7281968533449702E-4,-1.5592346128894157E-4,-5.239579492910452E-5,1.680719343542442E-4,2.8930086786548053E-4,3.629921493231646E-4,2.958223512266975E-4,2.1770466955449064E-4,-6.40884808188951E-5,-1.9058225556007997E-4,-2.0425138564600712E-4,-1.711994903702119E-4,-1.3853486798341369E-4,-1.3018592950855062E-4,-1.1887779512760102E-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-7.021411112285498E-5,-1.694500843168125E-5,-7.189722824172193E-5,-1.4560828004346436E-4,-1.4935497340563198E-4,-1.9496419340776972E-4,-1.7383743417254187E-4,-3.3438825792010694E-5,2.866538327947017E-4,2.9812321570739803E-4,3.77250607691119E-4,3.211702827486386E-4,2.577995115175486E-4,-1.6627385656703205E-4,-1.8037105851523224E-4,-2.0419356344211325E-4,-1.7962237203420184E-4,-1.3726488083579862E-4,-1.3461014473741762E-4,-1.2264216469164138E-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-0.0015239752514658556,-5.472330865993813E-5,-9.65684394936216E-5,-1.3424729853486994E-4,-1.4727467799568E-4,-1.616270978824712E-4,-1.8458259010029364E-4,-1.9699647135089726E-4,1.3085261294290817E-4,2.943178857107149E-4,3.097773692834126E-4,4.112834769312103E-4,3.4113620757035025E-4,1.6529945924367265E-4,-2.1065410862650534E-4,-1.883924081539624E-4,-1.979586414569358E-4,-1.762131187223702E-4,-1.272343622678854E-4,-1.2708161719220297E-4,-1.4812221011889967E-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-0.001140680600536578,-1.323467421269896E-4,-1.2904607854274846E-4,-1.4104748544921958E-4,-1.5194605434027872E-4,-2.1104539389774283E-4,-1.7911827582001795E-4,-1.8952948277194435E-4,2.1767571552539842E-4,3.0201791656326465E-4,4.002863274397723E-4,4.0322806756364006E-4,4.118077382608461E-4,3.7917405252859545E-6,-1.9886290660234838E-4,-1.9547443112937263E-4,-1.9857348218680872E-4,-1.3336892200703206E-4,-1.2830129292910815E-4,-1.1855916317355505E-4,-1.765597203760205E-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-0.0010938769592297973,-1.2785475305234688E-4,-1.3424699777466666E-4,-1.505200652479287E-4,-1.9333287822872713E-4,-2.0385160086594937E-4,-1.7422470698847553E-4,4.63598443910652E-5,2.0617623087127652E-4,2.862882891134514E-4,4.074830988361515E-4,3.726357785147985E-4,3.507520190729629E-4,-1.516485494364312E-4,-1.7053751921469217E-4,-1.9638964654350848E-4,-1.9962586265806435E-4,-1.3612312664311173E-4,-1.218285533892454E-4,-1.1166712081624676E-4,-1.377283888177579E-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-3.044386260118809E-4,-1.240836643202059E-4,-1.335317492716633E-4,-1.5783442604618277E-4,-1.9168434243384107E-4,-1.8710322733892716E-4,-1.1283989231463139E-4,1.1136504453105364E-4,1.8707244892705632E-4,2.8654279528966305E-4,4.0032117544983536E-4,3.169637536305377E-4,2.0158994278679014E-4,-1.3139392844616033E-4,-1.5181070482383948E-4,-1.825431845981843E-4,-1.602539928567571E-4,-1.3230404795396355E-4,-1.1669138691257469E-4,-1.0532154964150405E-4,-1.3709037042366007E-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-4.0287410145021705E-4,-1.3563987950912995E-4,-1.3225887084018914E-4,-1.6523502389794188E-4,-2.0175074284706945E-4,-1.572459106394481E-4,2.577536501278673E-6,1.312463663419457E-4,2.0707422291927531E-4,3.9081065544314936E-4,3.3487058329898135E-4,2.5790441367156086E-4,2.6881819648016494E-5,-1.511383586714907E-4,-1.605428139328567E-4,-1.7267287462873575E-4,-1.1938943768052963E-4,-1.0505245038633314E-4,-1.1109385509034013E-4,-1.3469914274864725E-4,-2.0735223736035555E-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-5.034374233912422E-4,-1.5961213688405883E-4,-1.274222123810994E-4,-1.582821104884909E-4,-2.1301220616286252E-4,-1.2933366375029613E-4,1.6802673102179614E-5,1.1020918082727098E-4,2.1160795272688753E-4,3.4873421050827716E-4,2.6487211944380384E-4,1.151606835026639E-4,-5.4682731396851946E-5,-1.3632001630934325E-4,-1.4340405857651405E-4,-1.248695773821634E-4,-8.462873247977974E-5,-9.580708414770257E-5,-1.0749166605399431E-4,-1.4618038459197777E-4,-3.7556446296204636E-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-5.124342611878493E-4,-2.0369734099093433E-4,-1.3626985098328694E-4,-1.3313768183302705E-4,-1.871555537819396E-4,-1.188817315789655E-4,-1.8774817595622694E-5,5.7108412194993384E-5,1.2728161056121406E-4,1.9021458214915667E-4,1.2177397895874969E-4,-1.2461153574281128E-5,-7.553961810487739E-5,-1.0242174559410404E-4,-4.44873554195981E-5,-9.058561577961895E-5,-6.837347198855518E-5,-8.084409304255458E-5,-1.3316868299585082E-4,-2.0335916397646626E-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-3.966510928472775E-4,-1.3738983629066386E-4,-3.7971221409699866E-5,-6.431763035574533E-5,-1.1857739882295322E-4,-9.359520863114822E-5,-5.0878371516215046E-5,-8.269367595092908E-8,0.0,1.3434539131099211E-5,-1.9601690213728576E-6,-2.8527045990494954E-5,-7.410332699310603E-5,-7.132130570080122E-5,-4.9780961185536E-5,-6.641505361384578E-5,-6.962005514093816E-5,-7.752898158331023E-5,-1.7393609499225025E-4,-0.0012529479255443958,0.0,0.0,2.0682521269893754E-4,0.0,0.0,0.0,0.0,0.0,-4.6702467383631055E-4,-1.0318036388792008E-4,1.2004408785841247E-5,0.0,-2.5158639357650687E-5,-1.2095240910793449E-5,-5.19052816902203E-6,-4.916790639558058E-6,-8.48395853563783E-6,-9.362757097074547E-6,-2.0959335712838412E-5,-4.7790091043859085E-5,-7.92797600958695E-5,-4.462687041778011E-5,-4.182992428577707E-5,-3.7547996285851254E-5,-4.52754480225615E-5,-1.8553562561513456E-5,-2.4763037962085644E-4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-3.4886180455242474E-4,-5.687523659359091E-6,7.380040279654313E-5,4.395860636703821E-5,7.145198242379862E-5,6.181248343370637E-6,0.0,-6.0855538083486296E-5,-4.8563908323274725E-5,-4.117920588930435E-5,-4.359283623112936E-5,-6.608754161500044E-5,-5.443032251266018E-5,-2.7782637880987207E-5,0.0,0.0,2.879461393464088E-4,-0.0028955529777851255,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.2312114837837392E-4,-1.9526747917254753E-5,-1.6999506829961688E-5,5.4835294148085086E-5,1.523441632762399E-5,-5.8365604525328614E-5,-1.2378194216521848E-4,-1.1750704953254656E-4,-6.19711523061306E-5,-5.042009645812091E-5,-1.4055260223565886E-4,-1.410330942465528E-4,-1.9272308238929396E-4,-4.802489964676616E-4] Intercept: 0.012911305214513969
-*/
-  - Naive Bayes
+
+## Naive Bayes
 In a broad sense, Naive Bayes models are a special class of algorithms for
 classification of Machine Learning, or Machine Learning, as we will refer to from now on. They are based on a statistical classification technique called "Bayes's theorem." These models are called "Naive" algorithms, or "Innocents" in Spanish. They assume that the predictor variables are independent of each other. In other words, that the presence of a certain feature in a data set is not at all related to the presence of any other feature. They provide an easy way to build very well behaved models due to their simplicity.
 Naive Bayes strengths and weaknesses
 
 The main strengths are:
-A fast and easy way to predict classes, for binary and multiclass classification problems.
-In cases where a presumption of independence is appropriate, the algorithm performs better than other classification models, even with less training data.
-The decouples of the class conditional characteristic distributions mean that each distribution can be estimated independently as having only one dimension. This helps with dimensionality issues and improves performance.
+- A fast and easy way to predict classes, for binary and multiclass classification problems.
+- In cases where a presumption of independence is appropriate, the algorithm performs better than other classification models, even with less training data.
+- The decouples of the class conditional characteristic distributions mean that each distribution can be estimated independently as having only one dimension. This helps with dimensionality issues and improves performance.
 
 The main weak points are:
-Although they are pretty good classifiers, Naive Bayes algorithms are notorious for being poor estimators. Therefore, the probabilities obtained should not be taken very seriously.
-The Naive independence presumption most likely does not reflect what data is like in the real world.
-When the test data set has a characteristic that has not been observed in the training set, the model will assign it a probability of zero and it will be useless to make predictions. One of the main methods to avoid this is the smoothing technique, the Laplace estimation being one of the most popular.
+- Although they are pretty good classifiers, Naive Bayes algorithms are notorious for being poor estimators. Therefore, the probabilities obtained should not be taken very seriously.
+- The Naive independence presumption most likely does not reflect what data is like in the real world.
+- When the test data set has a characteristic that has not been observed in the training set, the model will assign it a probability of zero and it will be useless to make predictions. One of the main methods to avoid this is the smoothing technique, the Laplace estimation being one of the most popular.
 
 Naive Bayes classifier types:
-Naive multinomial Bayes:
-This is mainly used for document classification problems, that is, if a document belongs to the category of sports, politics, technology, etc. The characteristics / predictors used by the classifier are the frequency of the words present in the document.
-Naive Bernoulli Bayes:
-This is similar to multinomial naive bayes, but the predictors are Boolean variables. The parameters we use to predict the class variable take only yes or no values, for example whether a word appears in the text or not.
-Naive Gaussian Bayes:
-When the predictors take a continuous value and are not discrete, we assume that these values are sampled from a Gaussian distribution.
+- Naive multinomial Bayes:
+  - This is mainly used for document classification problems, that is, if a document belongs to the category of sports, politics, technology, etc. The characteristics / predictors used by the classifier are the frequency of the words present in the document.
+- Naive Bernoulli Bayes:
+  - This is similar to multinomial naive bayes, but the predictors are Boolean variables. The parameters we use to predict the class variable take only yes or no values, for example whether a word appears in the text or not.
+- Naive Gaussian Bayes:
+  - When the predictors take a continuous value and are not discrete, we assume that these values are sampled from a Gaussian distribution.
 
 This section will explain how the code of the Naive bayes implementation in scala works, using spark, the following code performs the steps to perform this regression.
 
+```
 // We must load the following libraries that will help us with this algorithm of // classification
 import org.apache.spark.ml.classification.NaiveBayes
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
@@ -971,6 +990,8 @@ val evaluator = new MulticlassClassificationEvaluator()
   .setMetricName("accuracy")
 val accuracy = evaluator.evaluate(predictions)
 println("Test set accuracy = " + accuracy)
+```
+
 /*
 Output:
 +-----+--------------------+--------------------+-----------+----------+
@@ -999,7 +1020,6 @@ Output:
 +-----+--------------------+--------------------+-----------+----------+
 only showing top 20 rows
 Test set accuracy = 1.0
-*/
 
 
 
@@ -1019,21 +1039,22 @@ Test set accuracy = 1.0
 
 
 
-Algoritmos de Regresión
+
+# Algoritmos de Regresión
 
 Unlike the classification algorithms that give us data that can be from a category, the regression gives us a numerical value, this will be a value within an infinite set of values.
-Some simple regression examples are:
-Predict the fluctuations of virtual currencies.
-Estimate how long it will take a car to reach its destination.
-Predict how many products are sold in a certain category.
+- Some simple regression examples are:
+- Predict the fluctuations of virtual currencies.
+- Estimate how long it will take a car to reach its destination.
+- Predict how many products are sold in a certain category.
 
 In the world of machine learning there are many techniques that we can use for regression problems, some examples are:
 
-Linear and nonlinear regression.
-Support vector machines.
-Decision tree.
-Random forests.
-Deep learning.
+- Linear and nonlinear regression.
+- Support vector machines.
+- Decision tree.
+- Random forests.
+- Deep learning.
 
 Within the world of machine learning there are algorithms that work in both categories, that is why we can have trees in classification algorithms and in regression.
 Regression analysis concentrates on setting a variable as dependent and seeing its behavior with another series of independent and / or changing variables. With these models we can build a machine learning process that facilitates the prediction of results and forecasts.
@@ -1057,10 +1078,10 @@ Regression analysis concentrates on setting a variable as dependent and seeing i
 
 
 
-  - Linear regression
+## Linear regression
 Linear regression is a field of study that emphasizes the statistical relationship between two continuous variables known as predictor and response variables. (Note: when there is more than one predictor variable, it becomes multiple linear regression.)
-The predictor variable is most often denoted x and is also known as the independent variable.
-The response variable is most often denoted as and and is also known as the dependent variable.
+- The predictor variable is most often denoted x and is also known as the independent variable.
+- The response variable is most often denoted as and and is also known as the dependent variable.
 
 A regression model is a model that allows us to describe how one variable x influences another variable y. Being the variable x an independent variable and the variable y, a dependent. Aims to establish estimates of y for different values ​​of X
 The simple linear regression forecast is an optimal model for demand patterns with a trend (increasing or decreasing), that is, patterns that present a linear relationship between demand and time.
@@ -1068,14 +1089,16 @@ This form of analysis estimates the coefficients of the linear equation, involvi
 Linear regression models are relatively straightforward and provide an easy-to-interpret mathematical formula that can generate predictions. Linear regression can be applied to various areas of business and academic studies.
 
 Assumptions that must be taken into account to be successful with linear regression analysis:
-For each variable: Consider the number of valid cases, the mean, and the standard deviation.
-For each model: Consider regression coefficients, correlation matrix, partial and semi-partial correlations, multiple R, R2, adjusted R2, change in R2, standard error of estimate, analysis of variance table, predicted values, and residuals. Also, consider 95 percent confidence intervals for each regression coefficient, variance-covariance matrix, variance inflation factor, tolerance, Durbin-Watson test, distance measures (Mahalanobis, Cook, and leverage values), DfBeta, DfFit, prediction intervals and diagnostic information on each case.
-Graphs: Consider scatter plots, partial and normal probability graphs, and histograms.
-Data: The dependent and independent variables must be quantitative. Categorical variables, such as religion, main field of study, or region of residence, must be recoded to be binary (dummy) variables or other types of contrast variables.
-Other hypotheses: For each value of the independent variable, the distribution of the dependent variable must be normal. The variance of the distribution of the dependent variable must be constant for all values ​​of the independent variable. The relationship between the dependent variable and each independent variable must be linear; furthermore, all observations must be independent.
+
+- For each variable: Consider the number of valid cases, the mean, and the standard deviation.
+- For each model: Consider regression coefficients, correlation matrix, partial and semi-partial correlations, multiple R, R2, adjusted R2, change in R2, standard error of estimate, analysis of variance table, predicted values, and residuals. Also, consider 95 percent confidence intervals for each regression coefficient, variance-covariance matrix, variance inflation factor, tolerance, Durbin-Watson test, distance measures (Mahalanobis, Cook, and leverage values), DfBeta, DfFit, prediction intervals and diagnostic information on each case.
+- Graphs: Consider scatter plots, partial and normal probability graphs, and histograms.
+- Data: The dependent and independent variables must be quantitative. Categorical variables, such as religion, main field of study, or region of residence, must be recoded to be binary (dummy) variables or other types of contrast variables.
+- Other hypotheses: For each value of the independent variable, the distribution of the dependent variable must be normal. The variance of the distribution of the dependent variable must be constant for all values ​​of the independent variable. The relationship between the dependent variable and each independent variable must be linear; furthermore, all observations must be independent.
 
 This section will explain how the code of the linear regression implementation works in scala, using spark, the following code performs the steps to perform this regression.
 
+```
 // We must import the following library that will help us with this linear regression algorithm.
 import org.apache.spark.ml.regression.LinearRegression
 
@@ -1102,6 +1125,8 @@ println(s"objectiveHistory: [${trainingSummary.objectiveHistory.mkString(",")}]"
 trainingSummary.residuals.show()
 println(s"RMSE: ${trainingSummary.rootMeanSquaredError}")
 println(s"r2: ${trainingSummary.r2}")
+```
+
 /*
 Output:
 Coefficients: [0.0,0.32292516677405936,-0.3438548034562218,1.9156017023458414,0.05288058680386263,0.765962720459771,0.0,-0.15105392669186682,-0.21587930360904642,0.22025369188813426] Intercept: 0.1598936844239736
@@ -1134,9 +1159,9 @@ objectiveHistory: [0.49999999999999994,0.4967620357443381,0.4936361664340463,0.4
 only showing top 20 rows
 RMSE: 10.189077167598475
 r2: 0.022861466913958184
-*/
 
-  - Generalized linear regression
+
+## Generalized linear regression
 Generalized linear regression algorithms
 It is a flexible generalization of ordinary linear regression that allows response variables that have error distribution patterns other than a normal distribution. The GLM generalizes linear regression by allowing the linear model to be related to the response variable through a link function and by allowing the magnitude of the variance of each measurement to be a function of its predicted value.
 John Nelder and Robert Wedderburn formulated generalized linear models as a way to unify other statistical models, such as linear regression, logistic regression, and Poisson regression. They proposed an iteratively weighted least squares method for the maximum likelihood estimation of the model parameters. Maximum likelihood estimation remains popular and is the default method in many statistical computing packages. Other approaches have been developed, including Bayesian approaches and least squares fits to stabilized responses of variance.
@@ -1147,6 +1172,7 @@ In contrast to linear regression where the output is assumed to follow a Gaussia
 
 This section will explain how the code for the implementation of generalized linear regression through gauss in scala works, using spark, the following code performs the steps to perform this regression.
 
+```
 // We must import the following library that will help us with this generalized linear regression algorithm.
 import org.apache.spark.ml.regression.GeneralizedLinearRegression
 
@@ -1182,6 +1208,8 @@ println(s"Residual Degree Of Freedom: ${summary.residualDegreeOfFreedom}")
 println(s"AIC: ${summary.aic}")
 println("Deviance Residuals: ")
 summary.residuals().show()
+```
+
 /*
 Output:
 Coefficients: [0.010541828081257216,0.8003253100560949,-0.7845165541420371,2.3679887171421914,0.5010002089857577,1.1222351159753026,-0.2926824398623296,-0.49837174323213035,-0.6035797180675657,0.6725550067187461]
@@ -1221,20 +1249,20 @@ Deviance Residuals:
 | -1.13802589316832|
 +-------------------+
 only showing top 20 rows
-*/
 
-  - Decision tree regression
+
+## Decision tree regression
 A decision tree is a flowchart like tree structure, where each internal node denotes a test on an attribute, each branch represents a test result
 and each terminal node contains a class label.
 Typically starts with a single node, branching off into possible outcomes. Each of those results leads to additional nodes, which branch out into other possibilities. This gives it an arboreal shape.
 There are three different types of nodes:
 
-Opportunity nodes.
-An opportunity node shows the probabilities of certain outcomes.
-decision nodes.
-A decision node shows a decision to be made.
-end nodes.
-An end node shows the end result of a decision path.
+- Opportunity nodes.
+  - An opportunity node shows the probabilities of certain outcomes.
+- decision nodes.
+  - A decision node shows a decision to be made.
+- end nodes.
+  - An end node shows the end result of a decision path.
 
 
 Decision trees and their sets are popular methods for machine learning regression and classification tasks. Decision trees are widely used because they are easy to interpret, handle categorical features, extend to multiclass classification settings, do not require feature scaling, and can capture nonlinearities and feature interactions. Tree set algorithms, such as random forests and momentum, are among the best for classification and regression tasks.
@@ -1243,6 +1271,7 @@ The decision tree is a greedy algorithm that performs recursive binary partition
 
 This section will explain how the code of the implementation of the regression decision tree in scala works, using spark, in the following code the steps are performed to perform this regression.
 
+```
 // We must load the following libraries that will help us with this algorithm of // classification
 // The pipeline library helps us with the estimation of the data, while the decision // libraries help us with the model and its evaluation, while the feature library helps us // with the extraction and transformation of characteristics in the data.
 
@@ -1294,6 +1323,8 @@ println("Root Mean Squared Error (RMSE) on test data = " + rmse)
 
 val treeModel = model.stages(1).asInstanceOf[DecisionTreeRegressionModel]
 println("Learned regression tree model:\n" + treeModel.toDebugString)
+```
+
 /*
 Output:
 +----------+-----+--------------------+
@@ -1316,9 +1347,9 @@ Else (feature 99 not in {0.0,3.0})
 Predict: 1.0
 Else (feature 406 > 126.5)
 Predict: 1.0
-*/
 
-Conclusión.
+
+## Conclusión.
 In the branch of machine learning, algorithms are the cornerstone of supervised learning, in the categories of classification and regression, with the help of these algorithms companies have been able to predict hundreds of movements and what could happen with these movements, classifying algorithms have been used in areas of health, construction, climate, its usefulness is enough because with the help of these we can know the probabilities of data that we want, an example could be the probability in which a patient may suffer from a disease based on other data, such as We can see throughout this document algorithms and their application in scala are described and it can be said that they all work for something specific and in which some have an advantage over others, so it is necessary to know what is required to be done with the information you have.
 
 
