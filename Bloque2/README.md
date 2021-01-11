@@ -3,20 +3,20 @@ Machine learning or machine learning in Spanish is a branch of data science / ar
 In this way we can know that machine learning is essential for our daily lives, since with this we can have recommender systems like those of Netflix that, based on our preferences, can recommend movies or series that may interest us, according to this, in machine learning there are classifier and regression algorithms; This document will seek to delve into the different algorithms in the world of machine learning, mainly the classification and regression algorithms together with their scala code using the spark framework, but before we begin, we must know what we mean by each algorithm type.
 The classification algorithms try to identify and classify objects on a set of predefined classes, for example, classify if a news is sports, entertainment, politics, etc. If only 2 possible classes are allowed, then it is called binary classification; but if more than 2 classes are allowed, we are talking about multiclass classification, this type of algorithms is in the supervised learning category since they learn based on the relationships that associate the input values ​​with the information output values ​​according to the type of data output you can have the category to which the algorithm belongs, it can be classification or regression where we would find out if it is regression because the output value would be continuous data, thus being a line with the prediction.
 
-##Classification algorithms
+## Classification algorithms
 
 The classification algorithms is a concept that is often used in the world of machine learning, which, as we will see, is used to predict a category in which an object can be classified based on the input data, for example we can use this type algorithms to predict if an email is "spam" or is a "real", in this type of algorithms there are two main classifications. we have the:
 
-##Binary classification.
-  -In this case we can use the example given above, with the mail that must be categorized as "spam" or "true" mail, since we only have 2 final data taking as 0 or 1 any of the two states in which the mail, if an email enters and must be classified in any of these 2 classes, if it is "spam" it would be "0" and if it is "true" it would be "1" taking into account the characteristics of the new mail that arrives.
+## Binary classification.
+  - In this case we can use the example given above, with the mail that must be categorized as "spam" or "true" mail, since we only have 2 final data taking as 0 or 1 any of the two states in which the mail, if an email enters and must be classified in any of these 2 classes, if it is "spam" it would be "0" and if it is "true" it would be "1" taking into account the characteristics of the new mail that arrives.
 
-##Multinomial Classification.
-  -In this case, the multinomial type is one that has input data but has a large number of output values, an example is the classification of a set of images, taking into account that we are asked to classify an image in categories such as:
-    -Animals.
-    -People.
-    -Plants.
+## Multinomial Classification.
+  - In this case, the multinomial type is one that has input data but has a large number of output values, an example is the classification of a set of images, taking into account that we are asked to classify an image in categories such as:
+    - Animals.
+    - People.
+    - Plants.
 
-    -If it only had two classes, it would be a binary classification.
+  - If it only had two classes, it would be a binary classification.
 
 Next, some algorithms and their explanation in code using scala will be explained in a detailed way with the help of the spark framework and with the help of the MLlib library which is used in scala to handle Machine Learning in a simple way, which gives us many tool for the use of machine learning, with a few simple lines of code we can observe in more detail the operation of some algorithms of the classification type.
 
@@ -31,13 +31,14 @@ Next, some algorithms and their explanation in code using scala will be explaine
 
 
 
-##Logistic regression
+## Logistic regression
 Logistic regression is a statistical tool developed in the 60's, it is a simple but very useful algorithm and it can be adapted for a multiclass classification, the basis of regression systems is to predict qualitative characteristics of an object based on The data that we could have, which must be known variables, these can be qualitative or qualitative values that must act as dependent variables. An example of this could be classifying the sex of a black widow by her size.
 
 The logistic regression is divided into 2 types:
--Binary logistic regression.
+
+- Binary logistic regression.
 This makes use of known variables, whether qualitative or quantitative, to act as the variables that will be used to determine the characteristics that we need to predict a third variable that can only have an answer within parameters 0 or 1.
--Multinomial logistic regression.
+- Multinomial logistic regression.
 Multinomial regression also makes use of qualitative or quantitative variables to predict data, but in this case we not only have 2 classes 0 or 1, in this case we can have more of these classes.
 
 Through logistic regression, the aim is to obtain the probability that an event occurs based on variables that we determine are important to predict the new one, these must be relevant to be able, for example, if we have a human being and we want to classify it in a biological gender, We can do it if we have information about the reproductive system, its complexion, etc; with these data we could predict their sex.
@@ -45,24 +46,24 @@ Through logistic regression, the aim is to obtain the probability that an event 
 
 
 
-##Binomial logistic regression
+## Binomial logistic regression
 
 The binary logistic regression algorithm is a subcategory of the logistic regression algorithms, it refers to binary because it is one in which you can only have two final values, 0 or 1, false or true, its use can be given when we are interested in knowing the influence of a set of variables to predict an output variable, its use is very useful for when we want to know a third variable.
 
 If we have a variable in which we only have two possible events in which a person lives or dies, these will be our dependent variables and we want to know the effect of other independent variables such as age or smoking, the logistic regression model will help us to calculate the next:
 
--Given the values of the independent variables, estimate the probability that the event of interest occurs (for example, becoming ill).
--We can evaluate the influence that each independent variable has on the response, in the form of OR.
--An OR greater than one indicates an increase in the probability of the event and an OR less than one indicates a decrease.
+- Given the values of the independent variables, estimate the probability that the event of interest occurs (for example, becoming ill).
+- We can evaluate the influence that each independent variable has on the response, in the form of OR.
+- An OR greater than one indicates an increase in the probability of the event and an OR less than one indicates a decrease.
 
 But to build a binary logistic regression model we need:
--A set of independent variables.
--A response variable that only has two values 0 or 1. Here it differs from the multiple regression model, where the response variable is numeric.
+- A set of independent variables.
+- A response variable that only has two values 0 or 1. Here it differs from the multiple regression model, where the response variable is numeric.
 
 Steps to follow to encode the variables:
 
--The dependent variable must be coded as 1, which will indicate that the event can happen and its absence as 0.
--The independent variables can be several, the following being the most used:
+- The dependent variable must be coded as 1, which will indicate that the event can happen and its absence as 0.
+- The independent variables can be several, the following being the most used:
     -Dichotomic:
       -The case that is believed favors the occurrence of the event is coded as 1. The opposite case is encoded as 0.
     -Categorical:
@@ -74,7 +75,9 @@ In order to obtain a correct binary logistic regression model, we must take into
 
 This section will explain how the code of the binomial logistic implementation works in scala, using spark, in the following code the steps are performed to perform this regression.
 
-//```
+```
+
+```
 // We must load the class to use the function
 import org.apache.spark.ml.classification.LogisticRegression
 
@@ -110,6 +113,8 @@ val maxFMeasure = fMeasure.select(max("F-Measure")).head().getDouble(0)
 val bestThreshold = fMeasure.where($"F-Measure" === maxFMeasure)
   .select("threshold").head().getDouble(0)
 lrModel.setThreshold(bestThreshold)
+
+```
 
 ```
 
