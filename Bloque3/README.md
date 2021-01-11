@@ -1,3 +1,16 @@
+- [Introduction](#Introduction)
+- [Theorical framework](#Theoretical-framework)
+- [SVM](#SVM)
+- [Decision tree](#Decision-tree)
+- [Logistic Regression](#Logistic-Regression)
+- [Multilayer Perceptron](#Multilayer-perceptron)
+- [Implementation](#Implementation)
+- [Result](#Results)
+- [Conclusion](#Conclusions)
+- [References](#References)
+- [Code](#CODE)
+- [Author](#Collaborator)
+
 # Introduction
 
 Machine learning algorithms (Machine learning) are very useful tools for solving problems
