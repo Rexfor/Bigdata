@@ -1171,7 +1171,7 @@ In a generalized linear model (GLM), each Y outcome of the dependent variables i
 In contrast to linear regression where the output is assumed to follow a Gaussian distribution, generalized linear models (GLM) are specifications of linear models where the response variable “Yi” follows some distribution of the exponential family of distributions.
 
     - Available families
-![](Bloque2/family.png)
+![](family.png)
 
 This section will explain how the code for the implementation of generalized linear regression through gauss in scala works, using spark, the following code performs the steps to perform this regression.
 
