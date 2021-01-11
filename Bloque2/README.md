@@ -1407,10 +1407,14 @@ Bibliografía.
 - Rodrigo, J. A. (2016, agosto). Regresión logística simple y múltiple. cienciadedatos. https://www.cienciadedatos.net/documentos/27_regresion_logistica_simple_y_multiple.html
 - IBM Knowledge Center. (s. f.). IBM. Recuperado 17 de diciembre de 2020, de https://www.ibm.com/support/knowledgecenter/es/SSLVMB_sub/statistics_mainhelp_ddita/spss/regression/idh_mnlr_modl.html
 - Data, S. B. (2019, 14 diciembre). Árbol de decisión en Machine Learning (Parte 1). sitiobigdata.com. https://sitiobigdata.com/2019/12/14/arbol-de-decision-en-machine-learning-parte-1/
+- Data, S. B. (2019, 14 diciembre). Árbol de decisión en Machine Learning (Parte 1). sitiobigdata.com. https://sitiobigdata.com/2019/12/14/arbol-de-decision-en-machine-learning-parte-1/
 - Johanna Orellana Alvear - johanna.orellana@ucuenca.edu.ec. (s. f.). Arboles de decision y Random Forest. bookdown. Recuperado 17 de diciembre de 2020, de https://bookdown.org/content/2031/ensambladores-random-forest-parte-ii.html
 - Rodrigo, J. A. (s. f.). Arboles de decision, Random Forest, Gradient Boosting y C5.0. cienciadedatos. Recuperado 18 de diciembre de 2020, de https://www.cienciadedatos.net/documentos/33_arboles_de_prediccion_bagging_random_forest_boosting#Gradient_Boosting
 - N.A. (s. f.). Apuntes de estadistica. bioestadistica. Recuperado 18 de diciembre de 2020, de https://www.bioestadistica.uma.es/apuntesMaster/regresion-logistica-binaria.html
 - Roman, V. (2019b, abril 29). Algoritmos Naive Bayes: Fundamentos e Implementación. Medium. https://medium.com/datos-y-ciencia/algoritmos-naive-bayes-fudamentos-e-implementaci%C3%B3n-4bcb24b307f
+ Bloque2
 
 ### Collaborator
 * **Rexfor** - [Github] (https://github.com/Rexfor)
+
+
