@@ -348,20 +348,20 @@ forward.
   logistic regression algorithm which takes 10.9 seconds. , we can make a rank of these 4
   being as follows.
 
-  **1.Logistic regression:** 10.9 seconds.
-  **2.SVM:** 10.9 seconds.
-  **3.Decision tree:** 12.7 seconds.
-  **4.Multilayer perceptron:** 13 seconds.
+  - **1.Logistic regression:** 10.9 seconds.
+  - **2.SVM:** 10.9 seconds.
+  - **3.Decision tree:** 12.7 seconds.
+  - **4.Multilayer perceptron:** 13 seconds.
 
 ![time](https://user-images.githubusercontent.com/60914099/104149098-dc810500-5389-11eb-9cb9-896817f81f98.PNG)
 
   According to the previous data tables, they all have a similar performance but according to
   the execution time and its level of precision, they would be as follows,
 
-  **1.Logistic regression.**
-  **2.SVM.**
-  **3.Decision tree**
-  **4.Multilayer perceptron.**
+  - **1.Logistic regression.**
+  - **2.SVM.**
+  - **3.Decision tree**
+  - **4.Multilayer perceptron.**
 
   The first place is the logistic regression algorithm that has a shorter execution time and its
   level of precision is one of the highest and in these times of speed, time is everything.
