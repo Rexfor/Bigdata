@@ -1170,8 +1170,8 @@ John Nelder and Robert Wedderburn formulated generalized linear models as a way 
 In a generalized linear model (GLM), each Y outcome of the dependent variables is assumed to be generated from a particular distribution in the exponential family, a large class of probability distributions that includes the normal, binomial, Poisson, and gamma distributions. , among others.
 In contrast to linear regression where the output is assumed to follow a Gaussian distribution, generalized linear models (GLM) are specifications of linear models where the response variable “Yi” follows some distribution of the exponential family of distributions.
 
-    - Available families
-![](family.png)
+Available families
+ ![](family.png)
 
 This section will explain how the code for the implementation of generalized linear regression through gauss in scala works, using spark, the following code performs the steps to perform this regression.
 
