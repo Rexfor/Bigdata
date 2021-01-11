@@ -1412,5 +1412,5 @@ Bibliografía.
 - N.A. (s. f.). Apuntes de estadistica. bioestadistica. Recuperado 18 de diciembre de 2020, de https://www.bioestadistica.uma.es/apuntesMaster/regresion-logistica-binaria.html
 - Roman, V. (2019b, abril 29). Algoritmos Naive Bayes: Fundamentos e Implementación. Medium. https://medium.com/datos-y-ciencia/algoritmos-naive-bayes-fudamentos-e-implementaci%C3%B3n-4bcb24b307f
 
-###Collaborator
+### Collaborator
 * **Rexfor** - [Github] (https://github.com/Rexfor)
