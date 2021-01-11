@@ -1,5 +1,10 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Introduction
+=======
+#Introduction
+
+>>>>>>> Stashed changes
 =======
 #Introduction
 
@@ -8,6 +13,7 @@ Machine learning or machine learning in Spanish is a branch of data science / ar
 In this way we can know that machine learning is essential for our daily lives, since with this we can have recommender systems like those of Netflix that, based on our preferences, can recommend movies or series that may interest us, according to this, in machine learning there are classifier and regression algorithms; This document will seek to delve into the different algorithms in the world of machine learning, mainly the classification and regression algorithms together with their scala code using the spark framework, but before we begin, we must know what we mean by each algorithm type.
 The classification algorithms try to identify and classify objects on a set of predefined classes, for example, classify if a news is sports, entertainment, politics, etc. If only 2 possible classes are allowed, then it is called binary classification; but if more than 2 classes are allowed, we are talking about multiclass classification, this type of algorithms is in the supervised learning category since they learn based on the relationships that associate the input values ​​with the information output values ​​according to the type of data output you can have the category to which the algorithm belongs, it can be classification or regression where we would find out if it is regression because the output value would be continuous data, thus being a line with the prediction.
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 Classification algorithms
 The classification algorithms is a concept that is often used in the world of machine learning, which, as we will see, is used to predict a category in which an object can be classified based on the input data, for example we can use this type algorithms to predict if an email is "spam" or is a "real", in this type of algorithms there are two main classifications. we have the:
@@ -20,6 +26,8 @@ Animals.
 People.
 Plants.
 =======
+=======
+>>>>>>> Stashed changes
 #Classification algorithms
 
 The classification algorithms is a concept that is often used in the world of machine learning, which, as we will see, is used to predict a category in which an object can be classified based on the input data, for example we can use this type algorithms to predict if an email is "spam" or is a "real", in this type of algorithms there are two main classifications. we have the:
@@ -31,6 +39,9 @@ The classification algorithms is a concept that is often used in the world of ma
 -Animals.
 -People.
 -Plants.
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 If it only had two classes, it would be a binary classification.
@@ -48,7 +59,11 @@ Next, some algorithms and their explanation in code using scala will be explaine
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - Logistic regression
+=======
+##Logistic regression
+>>>>>>> Stashed changes
 =======
 ##Logistic regression
 >>>>>>> Stashed changes
@@ -68,7 +83,11 @@ Through logistic regression, the aim is to obtain the probability that an event 
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
    - Binomial logistic regression
+=======
+##Binomial logistic regression
+>>>>>>> Stashed changes
 =======
 ##Binomial logistic regression
 >>>>>>> Stashed changes
