@@ -1381,29 +1381,29 @@ In the branch of machine learning, algorithms are the cornerstone of supervised 
 
 Bibliografía.
 
-Gandhi, R. (2018, 26 junio). Naive Bayes Classifier - Towards Data Science. Medium. https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c
-Acerca de la regresión lineal. (s. f.). México | IBM. Recuperado 19 de diciembre de 2020, de https://www.ibm.com/mx-es/analytics/learn/linear-regression
-Spark. (s. f.) | Apache. Recuperado 19 de diciembre de 2020, de https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.mllib.regression.GeneralizedLinearAlgorithm
-Spark. (s. f.).  | Apache. Recuperado 19 de diciembre de 2020, de https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.mllib.regression.GeneralizedLinearAlgorithm
-Heras, J. M. (2020, 29 septiembre). ¿Clasificación o Regresión? IArtificial.net. https://www.iartificial.net/clasificacion-o-regresion/#Regresion
-Data, S. B. (2019a, diciembre 7). ¿Qué es la regresión lineal? Parte 1. sitiobigdata.com. https://sitiobigdata.com/2019/10/25/que-es-la-regresion-lineal/
-Koehrsen, W. (2020, 18 agosto). Random Forest Simple Explanation - Will Koehrsen. Medium. https://williamkoehrsen.medium.com/random-forest-simple-explanation-377895a60d2d
-Honkela, A. (2001, 30 mayo). Multilayer perceptrons. aalto. http://users.ics.aalto.fi/ahonkela/dippa/node41.html
-Nicholson, C. (s. f.). A Beginner’s Guide to Multilayer Perceptrons (MLP). Pathmind. Recuperado 19 de diciembre de 2020, de https://wiki.pathmind.com/multilayer-perceptron
-Heras, J. M. (2019, 28 mayo). Máquinas de Vectores de Soporte (SVM). IArtificial.net. https://www.iartificial.net/maquinas-de-vectores-de-soporte-svm/
-Máquina de vectores de soporte (SVM). (s. f.). MATLAB & Simulink. Recuperado 18 de diciembre de 2020, de https://la.mathworks.com/discovery/support-vector-machine.html
-L. (2019, 24 septiembre). Naive Bayes – Teoría. Ligdi González. https://ligdigonzalez.com/naive-bayes-teoria-machine-learning/#:%7E:text=Na%C3%AFve%20Bayes%20o%20el%20Ingenuo,de%20independencia%20entre%20los%20predictores.&text=Esta%20suposici%C3%B3n%20se%20denomina%20independencia%20condicional%20de%20clase.+
-Caparrini, F. S. (2020, 14 diciembre). Aprendizaje Supervisado y No Supervisado - Fernando Sancho Caparrini. cs. http://www.cs.us.es/%7Efsancho/?e=77
-Caparrini, F. S. (2017, 23 septiembre). Introducción al Aprendizaje Automático - Fernando Sancho Caparrini. cs. http://www.cs.us.es/%7Efsancho/?e=75
-N. (2018, 13 mayo). Regresión Lineal –. Aprende Machine Learning. https://www.aprendemachinelearning.com/tag/regresion-lineal/#:%7E:text=La%20regresi%C3%B3n%20lineal%20es%20un,Machine%20Learning%20y%20en%20estad%C3%ADstica.&text=En%20estad%C3%ADsticas%2C%20regresi%C3%B3n%20lineal%20es,explicativas%20nombradas%20con%20%E2%80%9CX%E2%80%9D.
-González, B. A. (s. f.). Conceptos básicos de Machine Learning – Cleverdata. cleverdata. Recuperado 16 de diciembre de 2020, de https://cleverdata.io/conceptos-basicos-machine-learning/
-Roman, V. (2019, 1 abril). Aprendizaje Supervisado: Introducción a la Clasificación y Principales Algoritmos. Medium. https://medium.com/datos-y-ciencia/aprendizaje-supervisado-introducci%C3%B3n-a-la-clasificaci%C3%B3n-y-principales-algoritmos-dadee99c9407
-Perez, A. J., Kizys, R., & Manzanedo Del Hoyo, L. M. (2010, enero). Regresion logistica Binaria. MECD. https://econometriai.files.wordpress.com/2010/01/reg-logistica.pdf
-Instituto de Economía y geografía, & Rojo, J. M. (2007, febrero). Regresión con variable dependiente cualitativa. Laboratorio de estadística. http://humanidades.cchs.csic.es/cchs/web_UAE/tutoriales/PDF/Regresion_variable_dependiente_dicotomica_3.pdf
-Rodrigo, J. A. (2016, agosto). Regresión logística simple y múltiple. cienciadedatos. https://www.cienciadedatos.net/documentos/27_regresion_logistica_simple_y_multiple.html
-IBM Knowledge Center. (s. f.). IBM. Recuperado 17 de diciembre de 2020, de https://www.ibm.com/support/knowledgecenter/es/SSLVMB_sub/statistics_mainhelp_ddita/spss/regression/idh_mnlr_modl.html
-Data, S. B. (2019, 14 diciembre). Árbol de decisión en Machine Learning (Parte 1). sitiobigdata.com. https://sitiobigdata.com/2019/12/14/arbol-de-decision-en-machine-learning-parte-1/
-Johanna Orellana Alvear - johanna.orellana@ucuenca.edu.ec. (s. f.). Arboles de decision y Random Forest. bookdown. Recuperado 17 de diciembre de 2020, de https://bookdown.org/content/2031/ensambladores-random-forest-parte-ii.html
-Rodrigo, J. A. (s. f.). Arboles de decision, Random Forest, Gradient Boosting y C5.0. cienciadedatos. Recuperado 18 de diciembre de 2020, de https://www.cienciadedatos.net/documentos/33_arboles_de_prediccion_bagging_random_forest_boosting#Gradient_Boosting
-N.A. (s. f.). Apuntes de estadistica. bioestadistica. Recuperado 18 de diciembre de 2020, de https://www.bioestadistica.uma.es/apuntesMaster/regresion-logistica-binaria.html
-Roman, V. (2019b, abril 29). Algoritmos Naive Bayes: Fundamentos e Implementación. Medium. https://medium.com/datos-y-ciencia/algoritmos-naive-bayes-fudamentos-e-implementaci%C3%B3n-4bcb24b307f
+- Gandhi, R. (2018, 26 junio). Naive Bayes Classifier - Towards Data Science. Medium. https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c
+- Acerca de la regresión lineal. (s. f.). México | IBM. Recuperado 19 de diciembre de 2020, de https://www.ibm.com/mx-es/analytics/learn/linear-regression
+- Spark. (s. f.) | Apache. Recuperado 19 de diciembre de 2020, de https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.mllib.regression.GeneralizedLinearAlgorithm
+- Spark. (s. f.).  | Apache. Recuperado 19 de diciembre de 2020, de https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.mllib.regression.GeneralizedLinearAlgorithm
+- Heras, J. M. (2020, 29 septiembre). ¿Clasificación o Regresión? IArtificial.net. https://www.iartificial.net/clasificacion-o-regresion/#Regresion
+- Data, S. B. (2019a, diciembre 7). ¿Qué es la regresión lineal? Parte 1. sitiobigdata.com. https://sitiobigdata.com/2019/10/25/que-es-la-regresion-lineal/
+- Koehrsen, W. (2020, 18 agosto). Random Forest Simple Explanation - Will Koehrsen. Medium. https://williamkoehrsen.medium.com/random-forest-simple-explanation-377895a60d2d
+- Honkela, A. (2001, 30 mayo). Multilayer perceptrons. aalto. http://users.ics.aalto.fi/ahonkela/dippa/node41.html
+- Nicholson, C. (s. f.). A Beginner’s Guide to Multilayer Perceptrons (MLP). Pathmind. Recuperado 19 de diciembre de 2020, de https://wiki.pathmind.com/multilayer-perceptron
+- Heras, J. M. (2019, 28 mayo). Máquinas de Vectores de Soporte (SVM). IArtificial.net. https://www.iartificial.net/maquinas-de-vectores-de-soporte-svm/
+- Máquina de vectores de soporte (SVM). (s. f.). MATLAB & Simulink. Recuperado 18 de diciembre de 2020, de https://la.mathworks.com/discovery/support-vector-machine.html
+- L. (2019, 24 septiembre). Naive Bayes – Teoría. Ligdi González. https://ligdigonzalez.com/naive-bayes-teoria-machine-learning/#:%7E:text=Na%C3%AFve%20Bayes%20o%20el%20Ingenuo,de%20independencia%20entre%20los%20predictores.&text=Esta%20suposici%C3%B3n%20se%20denomina%20independencia%20condicional%20de%20clase.+
+- Caparrini, F. S. (2020, 14 diciembre). Aprendizaje Supervisado y No Supervisado - Fernando Sancho Caparrini. cs. http://www.cs.us.es/%7Efsancho/?e=77
+- Caparrini, F. S. (2017, 23 septiembre). Introducción al Aprendizaje Automático - Fernando Sancho Caparrini. cs. http://www.cs.us.es/%7Efsancho/?e=75
+- N. (2018, 13 mayo). Regresión Lineal –. Aprende Machine Learning. https://www.aprendemachinelearning.com/tag/regresion-lineal/#:%7E:text=La%20regresi%C3%B3n%20lineal%20es%20un,Machine%20Learning%20y%20en%20estad%C3%ADstica.&text=En%20estad%C3%ADsticas%2C%20regresi%C3%B3n%20lineal%20es,explicativas%20nombradas%20con%20%E2%80%9CX%E2%80%9D.
+- González, B. A. (s. f.). Conceptos básicos de Machine Learning – Cleverdata. cleverdata. Recuperado 16 de diciembre de 2020, de https://cleverdata.io/conceptos-basicos-machine-learning/
+- Roman, V. (2019, 1 abril). Aprendizaje Supervisado: Introducción a la Clasificación y Principales Algoritmos. Medium. https://medium.com/datos-y-ciencia/aprendizaje-supervisado-introducci%C3%B3n-a-la-clasificaci%C3%B3n-y-principales-algoritmos-dadee99c9407
+- Perez, A. J., Kizys, R., & Manzanedo Del Hoyo, L. M. (2010, enero). Regresion logistica Binaria. MECD. https://econometriai.files.wordpress.com/2010/01/reg-logistica.pdf
+- Instituto de Economía y geografía, & Rojo, J. M. (2007, febrero). Regresión con variable dependiente cualitativa. Laboratorio de estadística. http://humanidades.cchs.csic.es/cchs/web_UAE/tutoriales/PDF/Regresion_variable_dependiente_dicotomica_3.pdf
+- Rodrigo, J. A. (2016, agosto). Regresión logística simple y múltiple. cienciadedatos. https://www.cienciadedatos.net/documentos/27_regresion_logistica_simple_y_multiple.html
+- IBM Knowledge Center. (s. f.). IBM. Recuperado 17 de diciembre de 2020, de https://www.ibm.com/support/knowledgecenter/es/SSLVMB_sub/statistics_mainhelp_ddita/spss/regression/idh_mnlr_modl.html
+- D- ata, S. B. (2019, 14 diciembre). Árbol de decisión en Machine Learning (Parte 1). sitiobigdata.com. https://sitiobigdata.com/2019/12/14/arbol-de-decision-en-machine-learning-parte-1/
+- Johanna Orellana Alvear - johanna.orellana@ucuenca.edu.ec. (s. f.). Arboles de decision y Random Forest. bookdown. Recuperado 17 de diciembre de 2020, de https://bookdown.org/content/2031/ensambladores-random-forest-parte-ii.html
+- Rodrigo, J. A. (s. f.). Arboles de decision, Random Forest, Gradient Boosting y C5.0. cienciadedatos. Recuperado 18 de diciembre de 2020, de https://www.cienciadedatos.net/documentos/33_arboles_de_prediccion_bagging_random_forest_boosting#Gradient_Boosting
+- N.A. (s. f.). Apuntes de estadistica. bioestadistica. Recuperado 18 de diciembre de 2020, de https://www.bioestadistica.uma.es/apuntesMaster/regresion-logistica-binaria.html
+- Roman, V. (2019b, abril 29). Algoritmos Naive Bayes: Fundamentos e Implementación. Medium. https://medium.com/datos-y-ciencia/algoritmos-naive-bayes-fudamentos-e-implementaci%C3%B3n-4bcb24b307f
