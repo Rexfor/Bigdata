@@ -76,8 +76,6 @@ In order to obtain a correct binary logistic regression model, we must take into
 This section will explain how the code of the binomial logistic implementation works in scala, using spark, in the following code the steps are performed to perform this regression.
 
 ```
-
-```
 // We must load the class to use the function
 import org.apache.spark.ml.classification.LogisticRegression
 
@@ -113,10 +111,8 @@ val maxFMeasure = fMeasure.select(max("F-Measure")).head().getDouble(0)
 val bestThreshold = fMeasure.where($"F-Measure" === maxFMeasure)
   .select("threshold").head().getDouble(0)
 lrModel.setThreshold(bestThreshold)
-
 ```
 
-```
 
 /*
 Output:
@@ -149,7 +145,7 @@ areaUnderROC: 1.0
 
 
 
-##Multinomial logistic regression
+## Multinomial logistic regression
 The multinomial logistic regression algorithm is used in models with dependent variables of the numerical type that can be divided into more than two categories, while the binary can only be done in 2 categories, being polyatomic, it is an extension of the binary version of logistic regression , the variables can be predictive with which we will help us to predict the result.
 Throughout the years, polycotomic variables have been modeled by discriminant analysis to determine if a variable using labels belongs to a category.
 It is based on the same principles as simple logistic regression but expanding the number of predictors. Predictors can be both continuous and categorical.
@@ -157,10 +153,10 @@ When evaluating the validity and quality of a multiple logistic regression model
 This is useful for situations in which you want to be able to classify subjects based on the values ​​of a set of predictor variables.
 Some considerations to take into account when performing this type of regression are:
 
--Data.
-  -The dependent variable must be categorical. The independent variables can be factors or covariates. In general, the factors must be categorical variables and the covariates must be continuous variables.
--Assumptions.
-  -The likelihood ratio of any pair of categories is assumed to be independent of the other response categories. Under this assumption, for example, if a new product is introduced into a market, the market shares of all other products will be affected equally proportionally. Similarly, given a pattern in the covariates, the responses are assumed to be independent multinomial variables.
+- Data.
+  - The dependent variable must be categorical. The independent variables can be factors or covariates. In general, the factors must be categorical variables and the covariates must be continuous variables.
+- Assumptions.
+  - The likelihood ratio of any pair of categories is assumed to be independent of the other response categories. Under this assumption, for example, if a new product is introduced into a market, the market shares of all other products will be affected equally proportionally. Similarly, given a pattern in the covariates, the responses are assumed to be independent multinomial variables.
 
 This section will explain how the multinomial logistics implementation code works in scala, using spark. The following code performs the steps to perform this regression.
 
@@ -281,7 +277,7 @@ Precision: 0.8678451178451179
 Recall: 0.82
 
 
-##Decision tree classifier
+## Decision tree classifier
 Tree-based learning algorithms are considered one of the best and most widely used supervised learning methods. Tree-based methods empower predictive models with high precision, stability, and ease of interpretation.
 Unlike linear models, they map nonlinear relationships quite well. They are adaptable to solve any type of problem (classification or regression).
 
@@ -289,24 +285,24 @@ Methods like decision trees, random forest, gradient augmentation are popularly 
 Decision or classification trees are algorithms for classifying using successive partitions. They are appropriate when there is a large number of data, one of their advantages being their descriptive nature that allows to easily understand and interpret the decisions made by the model, revealing complex forms in the data structure that cannot be detected with conventional regression methods.
 
 The decision trees contain the following components:
--Nodes.
-  -The nodes are the input variables
--Branches
-  -The branches represent the possible values ​​of the input variables
--Leaves.
-  -The leaves are the possible values ​​of the output variable.
+- Nodes.
+  - The nodes are the input variables
+- Branches
+  - The branches represent the possible values ​​of the input variables
+- Leaves.
+  - The leaves are the possible values ​​of the output variable.
 
 As the first element of a decision tree, we have the root node that is going to represent the most relevant variable in the classification process. All decision tree learning algorithms obtain models that are more or less complex and consistent with respect to the evidence, but if the data contains inconsistencies, the model will adjust to these inconsistencies and harm its overall behavior in prediction. known as overfitting. To solve this problem, it is necessary to limit the growth of the tree by modifying the learning algorithms to achieve more general models. This is what is known as decision tree pruning.
 Taking into account the above we can see the following disadvantages:
 
--The overfitting.
--Loss of information when categorizing continuous variables.
--Its level of precision compared to other methods such as SVM tends to have an error rate of less than 30% approximately.
--Its instability to small changes in the data can modify the entire structure of the tree.
+- The overfitting.
+- Loss of information when categorizing continuous variables.
+- Its level of precision compared to other methods such as SVM tends to have an error rate of less than 30% approximately.
+- Its instability to small changes in the data can modify the entire structure of the tree.
 But just as it has disadvantages, it also has many advantages that help us with our problems.
--It's easy to understand.
--It is useful in exploring data.
--The data type does not represent a constraint.
+- It's easy to understand.
+- It is useful in exploring data.
+- The data type does not represent a constraint.
 
 This section will explain how the decision tree implementation code works in scala, using spark. The following code performs the steps to perform this regression.
 
@@ -400,7 +396,7 @@ Else (feature 406 > 22.0)
 Predict: 0.0
 
 
-##Random forest classifier
+## Random forest classifier
 The Random Forest is a supervised learning algorithm. The "forest" that is built is a set of decision trees, generally trained with the packaging method. The general idea of ​​the bagging method is that a combination of learning models increases the overall result.
 Bottom line: Random Forest creates multiple decision trees and merges them together to get a more accurate and stable prediction.
 A great advantage of the random forest is that it can be used for both
@@ -416,10 +412,10 @@ And of course, the random forest is a predictive modeling tool and not a
 descriptive tool, which means if you are looking for a description of the relationships in your data, other approaches would be better.
 
 The way the random forest works is as follows:
--We select k features (columns) from the total m (where k is less than m) and we create a decision tree with those k features.
--We create n trees always varying the amount of k features and we could also vary the number of samples that we pass to those trees (this is known as a “bootstrap sample”)
--We take each of the n trees and ask them to make the same classification. We save the result of each tree obtaining n outputs.
--We calculate the votes obtained for each selected “class” and we will consider the one with the most votes as the final classification of our “forest”.
+- We select k features (columns) from the total m (where k is less than m) and we create a decision tree with those k features.
+- We create n trees always varying the amount of k features and we could also vary the number of samples that we pass to those trees (this is known as a “bootstrap sample”)
+- We take each of the n trees and ask them to make the same classification. We save the result of each tree obtaining n outputs.
+- We calculate the votes obtained for each selected “class” and we will consider the one with the most votes as the final classification of our “forest”.
 
 This section will explain how the decision tree implementation code works in scala, using spark. The following code performs the steps to perform this regression.
 
@@ -607,7 +603,7 @@ Predict: 0.0
 Else (feature 301 > 30.0)
 Predict: 1.0
 
-##Gradient-boosted tree classifier
+## Gradient-boosted tree classifier
 
 Gradient Boosting models are made up of a set of individual decision trees, trained sequentially, so that each new tree tries to improve on the errors of the previous trees. The prediction of a new observation is obtained by adding the predictions of all the individual trees that make up the model.
 Tree-based methods have become one of the benchmarks in the predictive field due to the good results they generate in very diverse problems.
@@ -866,6 +862,7 @@ In which the output result of the network is calculated from the input values fo
 In which the errors obtained at the output of the perceptron are propagated backwards (backpropagation) in order to modify the weights of the connections so that the estimated value of the network increasingly resembles the real one, this approximation is carried out by the gradient function of the error.
 
 This section will explain how the code of the multilayer perceptron implementation in scala works, using spark, in the following code the steps are performed to be able to perform this regression.
+
 ```
 // We must load the following libraries that will help us with this algorithm, for the classification of the perceptron type and its evaluation.
 import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
@@ -1174,6 +1171,7 @@ In a generalized linear model (GLM), each Y outcome of the dependent variables i
 In contrast to linear regression where the output is assumed to follow a Gaussian distribution, generalized linear models (GLM) are specifications of linear models where the response variable “Yi” follows some distribution of the exponential family of distributions.
 
     - Available families
+![](Bloque2/family.png)
 
 This section will explain how the code for the implementation of generalized linear regression through gauss in scala works, using spark, the following code performs the steps to perform this regression.
 
