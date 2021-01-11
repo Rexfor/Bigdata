@@ -34,6 +34,9 @@ Next, some algorithms and their explanation in code using scala will be explaine
 ## Logistic regression
 Logistic regression is a statistical tool developed in the 60's, it is a simple but very useful algorithm and it can be adapted for a multiclass classification, the basis of regression systems is to predict qualitative characteristics of an object based on The data that we could have, which must be known variables, these can be qualitative or qualitative values that must act as dependent variables. An example of this could be classifying the sex of a black widow by her size.
 
+![logistica](https://user-images.githubusercontent.com/60914099/104147363-cde31f80-5382-11eb-8e80-0a8acea3be7a.PNG)
+### Logistic regression
+
 The logistic regression is divided into 2 types:
 
 - Binary logistic regression.
@@ -1171,7 +1174,8 @@ In a generalized linear model (GLM), each Y outcome of the dependent variables i
 In contrast to linear regression where the output is assumed to follow a Gaussian distribution, generalized linear models (GLM) are specifications of linear models where the response variable “Yi” follows some distribution of the exponential family of distributions.
 
 Available families
- ![](family.png)
+ ![familys](https://user-images.githubusercontent.com/60914099/104147308-8f4d6500-5382-11eb-96b1-7279b554b1ad.PNG)
+
 
 This section will explain how the code for the implementation of generalized linear regression through gauss in scala works, using spark, the following code performs the steps to perform this regression.
 
@@ -1402,8 +1406,15 @@ Bibliografía.
 - Instituto de Economía y geografía, & Rojo, J. M. (2007, febrero). Regresión con variable dependiente cualitativa. Laboratorio de estadística. http://humanidades.cchs.csic.es/cchs/web_UAE/tutoriales/PDF/Regresion_variable_dependiente_dicotomica_3.pdf
 - Rodrigo, J. A. (2016, agosto). Regresión logística simple y múltiple. cienciadedatos. https://www.cienciadedatos.net/documentos/27_regresion_logistica_simple_y_multiple.html
 - IBM Knowledge Center. (s. f.). IBM. Recuperado 17 de diciembre de 2020, de https://www.ibm.com/support/knowledgecenter/es/SSLVMB_sub/statistics_mainhelp_ddita/spss/regression/idh_mnlr_modl.html
-- D- ata, S. B. (2019, 14 diciembre). Árbol de decisión en Machine Learning (Parte 1). sitiobigdata.com. https://sitiobigdata.com/2019/12/14/arbol-de-decision-en-machine-learning-parte-1/
+- Data, S. B. (2019, 14 diciembre). Árbol de decisión en Machine Learning (Parte 1). sitiobigdata.com. https://sitiobigdata.com/2019/12/14/arbol-de-decision-en-machine-learning-parte-1/
+- Data, S. B. (2019, 14 diciembre). Árbol de decisión en Machine Learning (Parte 1). sitiobigdata.com. https://sitiobigdata.com/2019/12/14/arbol-de-decision-en-machine-learning-parte-1/
 - Johanna Orellana Alvear - johanna.orellana@ucuenca.edu.ec. (s. f.). Arboles de decision y Random Forest. bookdown. Recuperado 17 de diciembre de 2020, de https://bookdown.org/content/2031/ensambladores-random-forest-parte-ii.html
 - Rodrigo, J. A. (s. f.). Arboles de decision, Random Forest, Gradient Boosting y C5.0. cienciadedatos. Recuperado 18 de diciembre de 2020, de https://www.cienciadedatos.net/documentos/33_arboles_de_prediccion_bagging_random_forest_boosting#Gradient_Boosting
 - N.A. (s. f.). Apuntes de estadistica. bioestadistica. Recuperado 18 de diciembre de 2020, de https://www.bioestadistica.uma.es/apuntesMaster/regresion-logistica-binaria.html
 - Roman, V. (2019b, abril 29). Algoritmos Naive Bayes: Fundamentos e Implementación. Medium. https://medium.com/datos-y-ciencia/algoritmos-naive-bayes-fudamentos-e-implementaci%C3%B3n-4bcb24b307f
+ Bloque2
+
+### Collaborator
+* **Rexfor** - [Github] (https://github.com/Rexfor)
+
+
